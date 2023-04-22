@@ -10,16 +10,35 @@
 <body class="container">
     <!-- Form for specific location -->
 			<div class="weather-form">
-				<label for="country" class="drop">Country</label>
-                <select name="" id="" class="dropdown">
+                <span class="section">
+                    <label for="country" class="drop">Country</label>
+                    <select class="dropdown-btn" id="country-btn"></select>
+                    <span id="dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="user-input" onkeyup="filterFunction()">
+                      <!-- <a href="#">Country 1</a>
+                      <a href="#">Country 2</a>
+                      <a href="#">Country 3</a> -->
+                      <li>Country 1</li>
+                      <li>Country 2</li>
+                      <li>Country 3</li>
+                    </span>
+                </span>
 
-                </select>
-				<label for="city" class="drop">City</label>
-                <select name="" id="" class="dropdown">
-
-                </select>
-                <br>
+                <span class="section">
+                    <label for="city" class="drop">City</label>
+                    <select class="dropdown-btn" id="city-btn"></select>
+                    <span id="dropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="user-input" onkeyup="filterFunction()">
+                      <!-- <a href="#">City 1</a>
+                      <a href="#">City 2</a>
+                      <a href="#">City 3</a> -->
+                      <li>City 1</li>
+                      <li>City 2</li>
+                      <li>City 3</li>
+                    </span>
+                </span>
 				<button class="submit-btn">Get weather</button>
 			</div>
+            <script src="index.js"></script>
 </body>
 </html>
