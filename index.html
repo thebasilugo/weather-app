@@ -8,37 +8,44 @@
     <title>Weather finder</title>
 </head>
 <body class="container">
-    <!-- Form for specific location -->
-			<div class="weather-form">
+
+<div class="left-float spans">
+    <h1>Weather Finder &RightArrow; </h1>
+    <h2>Use the information at the right to find the weather of a specific location</h2>
+</div>
+
+    <!-- Forms for specific location -->
+			<div class="weather-form spans">
+
+                <!-- Country dropdown -->
                 <span class="section">
-                    <label for="country" class="drop">Country</label>
-                    <select class="dropdown-btn" id="country-btn"></select>
-                    <span id="dropdown" class="dropdown-content">
-                        <input type="text" placeholder="Search.." id="user-input" onkeyup="filterFunction()">
-                      <!-- <a href="#">Country 1</a>
-                      <a href="#">Country 2</a>
-                      <a href="#">Country 3</a> -->
-                      <li>Country 1</li>
-                      <li>Country 2</li>
-                      <li>Country 3</li>
-                    </span>
+                    <label for="country" class="drop-tags">Country</label>
+                    <select class="dropdown-btn">
+                        <option selected disabled>Select a country</option>
+                        <option>Country 1</option>
+                        <option>Country 2</option>
+                    </select>
                 </span>
 
+                <!-- City dropdown -->
                 <span class="section">
-                    <label for="city" class="drop">City</label>
-                    <select class="dropdown-btn" id="city-btn"></select>
-                    <span id="dropdown" class="dropdown-content">
-                        <input type="text" placeholder="Search.." id="user-input" onkeyup="filterFunction()">
-                      <!-- <a href="#">City 1</a>
-                      <a href="#">City 2</a>
-                      <a href="#">City 3</a> -->
-                      <li>City 1</li>
-                      <li>City 2</li>
-                      <li>City 3</li>
-                    </span>
+                    <label for="city" class="drop-tags">City</label>
+                    <select class="dropdown-btn" onclick="showFunction()">
+                        <option selected disabled>Select a city</option>                        <option>City 1</option>
+                        <option>City 2</option>
+                    </select>
                 </span>
+
+                <!-- Submit button -->
+                <p></p>
 				<button class="submit-btn">Get weather</button>
 			</div>
+
+        <span class="signature"> 
+            <footer> &copy; <a href="https://thebasilugo.github.io/staticweb" target="
+                _blank">thebasilugo</a> 2023</footer>
+        </span>
+
             <script src="index.js"></script>
 </body>
 </html>
