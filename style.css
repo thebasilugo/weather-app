@@ -1,4 +1,3 @@
-/* Base line style */
 @import url(
 "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -15,484 +14,335 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row;
+	flex-direction: column;
 	gap: 30px;
+	background-color: rgb(231, 231, 231);
 	opacity: 1;
+}
+
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+pre {
+	color: rgb(0, 0, 0);
+}
+
+.heading {
+	color: rgb(18, 38, 43);
+}
+
+.title {
+	font-weight: 400;
+	letter-spacing: 1.5px;
 }
 
 .container {
 	height: 600px;
+	width: 500px;
+	background-color: white;
+	box-shadow: 8px 8px 20px rgb(128, 128, 128);
+	position: relative;
 	overflow: hidden;
 }
 
-.left-float{
-	width: 800px;
-	padding-top: 280px;
-	padding-bottom: 280px;
-	padding-left: 50px;
-	padding-right: 20px;
-	justify-content: center;
-	background-color: rgb(125, 180, 173);
-	transition: background-color 0.15s,
-				color 0.15s;
-}
-
-.left-float > h1{
-	font-size: 40px;
-}
-
-.left-float > h2{
-	font-size: 20px;
-}
-
-.left-float:hover{
-	background-color: black;
-	color: rgb(125, 180, 173);
-}
-
-.spans{
-	display: inline-block;
-}
-
-.weather-form{
-	color: rgb(0, 0, 0);
-	width: 500px;
-	justify-content: center;
-	padding-top: 20px;
-	padding-bottom: 300px;
-	padding-left: 40px;
-	padding-right: 10px;
-}
-
-.section {
-	position: relative;
-	display: inline-block;
-	margin-right: 15px;
-}
-  
-.section:hover .dropdown-btn {
-	background-color: #d5e0df;
-}
-
-.drop-tags{
-	font-weight: bold;
-	margin-left: 40px;
-	margin-bottom: 3px;
-}
-
-.dropdown-btn {
-	color: rgb(0, 0, 0);
-	height: 25px;
-	width: 150px;
-	margin: 8px auto;
-	border: none;
-	border-width: 1px;
-	border-style: solid;
-	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
-	border-radius: 18px;
+.btn {
+	color: white;
+	height: 40px;
+	width: 200px;
+	margin: 20px auto;
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+	border-radius: 50px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	cursor: pointer;
-	transition: background-color 0.1s;
-	margin-right: 40px;
 }
 
+.login,
+.signup {
+	color: rgb(236, 200, 39);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 22px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.15s;
+}
+
+.login:hover, .signup:hover{
+	color: rgb(50, 50, 105);
+}
+
+.login:active, .signup:active{
+	opacity: 0.5;
+}
+
+.slider {
+	height: 40px;
+	width: 100px;
+	border-radius: 50px;
+	background-image: linear-gradient(to right,
+			rgb(90, 79, 79),
+			rgb(174, 218, 218));
+	position: absolute;
+	top: 20px;
+	left: 150px;
+	transition: all 0.5s ease-in-out;
+}
+
+.moveslider {
+	left: 250px;
+}
+
+.form-section {
+	height: 450px;
+	width: 1000px;
+	padding: 20px 0;
+	display: flex;
+	position: relative;
+	transition: all 0.5s ease-in-out;
+	left: 0px;
+}
+
+.form-section-move {
+	left: -500px;
+}
+
+.login-box,
+.signup-box {
+	height: 100%;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 40px;
+}
+
+.login-box {
+	gap: 50px;
+}
+
+.signup-box {
+	gap: 30px;
+}
+
+.ele {
+	height: 60px;
+	width: 400px;
+	outline: none;
+	border: none;
+	color: rgb(77, 77, 77);
+	background-color: rgb(240, 240, 240);
+	border-radius: 50px;
+	padding-left: 30px;
+	font-size: 18px;
+	transition: height 0.15s,
+				width 0.15s;
+}
+
+.ele:hover{
+	height: 65px;
+	width: 425px;
+}
 .submit-btn{
 	color: white;
 	font-family: 'Courier New', Courier, monospace;
 	background-image: linear-gradient(to right,
 			rgb(0, 0, 0),
 			rgb(36, 136, 114));
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	height: 40px;
+	width: 100px;
 	border-radius: 50px;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-	font-size: 15px;
+	font-size: 18px;
 	border: none;
 	cursor: pointer;
 	transition: box-shadow 0.15s, 
-				padding-top 0.15s,
-				padding-bottom 0.15s,
-				padding-right 0.15s,
-				padding-left 0.15s;
-	font-weight: bold;
-	margin-top: 45px;
-	margin-left: 120px;
+				height 0.15s, 
+				width 0.15s;
 }
-
 .submit-btn:hover{
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-	padding-left: 14px;
-	padding-right: 14px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	height: 55px;
+	width: 125px;
 }
-
 .submit-btn:active{
 	opacity: 0.8;
-}
-
-.signature{
-	font-size: 10px;
-	font-weight: bold;
-	display: inline;
-	margin-top: 500px;
-	text-align: center;
-	cursor: pointer;
-	color: black;
-}
-
-.signature a{
-	color: black;
-	text-decoration: none;
-	transition:	color 0.2s;
-}
-
-.signature a:hover{
-	color: rgb(13, 86, 104);
 }
 
 /* For Responsiveness of the page */
 
 @media screen and (max-width: 650px) {
 	.container {
-	height: 600px;
-	width: 500px;
-	overflow: hidden;
+		height: 600px;
+		width: 300px;
 	}
 
-	.left-float {
-		justify-content: center;
-		background-color: rgb(125, 180, 173);
-		transition: background-color 0.15s,
-					color 0.15s;
+	.title {
+		font-size: 15px;
 	}
 
-	.left-float > h1{
+	.btn {
+		height: 35px;
+		width: 150px;
+		margin: 20px auto;
+	}
+
+	.login,
+	.signup {
+		font-size: 15px;
+	}
+
+	.slider {
+		height: 35px;
+		width: 80px;
+		left: 70px;
+	}
+
+	.moveslider {
+		left: 150px;
+	}
+
+	.form-section {
+		height: 400px;
+		width: 600px;
+	}
+
+	.form-section-move {
+		left: -300px;
+	}
+
+	.login-box,
+	.signup-box {
+		height: 100%;
+		width: 300px;
+	}
+
+	.ele {
+		height: 50px;
+		width: 250px;
+		font-size: 15px;
+		transition: height 0.15s,
+					width 0.15s;
+	}
+
+	.ele:hover{
+		height: 55px;
+		width: 265px;
+	}
+
+	.submit-btn{
+		color: white;
+		background-image: linear-gradient(to right,
+				rgb(27, 23, 18),
+				rgb(33, 172, 214));
+		height: 30px;
+		width: 80px;
+		border-radius: 15px;
+		font-size: 14px;
+		border: none;
+		cursor: pointer;
+		transition: height 0.15s,
+					width 0.15s,
+					border-radius 0.15s;
+	}
+	
+	.submit-btn:hover{
+		height: 40px;
+		width: 85px;
+		border-radius: 20px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.container {
+		height: 600px;
+		width: 250px;
+	}
+
+	.heading {
 		font-size: 30px;
 	}
 
-	.left-float > h2{
-		font-size: 20px;
+	.title {
+		font-size: 10px;
 	}
 
-	.left-float:hover{
-		background-color: black;
-		color: rgb(125, 180, 173);
+	.btn {
+		height: 50px;
+		width: 200px;
+		margin: 20px auto;
 	}
 
-	/* .weather-form{
-		color: rgb(0, 0, 0);
+	.login,
+	.signup {
+		font-size: 19px;
+	}
+
+	.slider {
+		height: 50px;
+		width: 100px;
+		left: 27px;
+	}
+
+	.moveslider {
+		left: 127px;
+	}
+
+	.form-section {
+		height: 500px;
 		width: 500px;
-		justify-content: center;
-		padding-top: 20px;
-		padding-bottom: 300px;
-		padding-left: 40px;
-		padding-right: 10px;
 	}
 
-	.section {
-		position: relative;
-		display: inline-block;
-		margin-right: 15px;
+	.form-section-move {
+		left: -250px;
+	}
+
+	.login-box,
+	.signup-box {
+		height: 100%;
+		width: 250px;
+	}
+
+	.ele {
+		height: 50px;
+		width: 220px;
+		font-size: 15px;
+		transition: height 0.15s,
+					width 0.15s;
 	}
 	
-	.section:hover .dropdown-btn {
-		background-color: #d5e0df;
+	.ele:hover{
+		height: 60px;
+		width: 230px;
 	}
-
-	.drop-tags {
-		font-weight: bold;
-		margin-left: 40px;
-		margin-bottom: 3px;
-	}
-
-	.dropdown-btn {
-		color: rgb(0, 0, 0);
-		height: 25px;
-		width: 150px;
-		margin: 8px auto;
-		border: none;
-		border-width: 1px;
-		border-style: solid;
-		box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
-		border-radius: 18px;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		cursor: pointer;
-		transition: background-color 0.1s;
-		margin-right: 40px;
-	} */
-
-	.submit-btn {
-		color: white;
-		font-family: 'Courier New', Courier, monospace;
-		background-image: linear-gradient(to right,
-				rgb(0, 0, 0),
-				rgb(36, 136, 114));
-		padding-left: 15px;
-		padding-right: 15px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		border-radius: 50px;
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-		font-size: 15px;
-		border: none;
-		cursor: pointer;
-		transition: box-shadow 0.15s, 
-					padding-top 0.15s,
-					padding-bottom 0.15s,
-					padding-right 0.15s,
-					padding-left 0.15s;
-		font-weight: bold;
-		margin-top: 45px;
-		margin-left: 120px;
-	}
-
-	.submit-btn:hover{ 
-		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-		padding-left: 14px;
-		padding-right: 14px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-
-	.submit-btn:active{
-		opacity: 0.8;
-	}
-
-	.signature{
-		font-size: 10px;
-		font-weight: bold;
-		display: inline;
-		margin-top: 500px;
-		text-align: center;
-		cursor: pointer;
-		color: black;
-	}
-
-	.signature a{
-		color: black;
-		text-decoration: none;
-		transition:	color 0.2s;
-	}
-
-	.signature a:hover{
-		color: rgb(13, 86, 104);
-	}
-
-
-	/* .container {
-		height: 600px;
-		width: 300px;
-		background-color: white;
-		position: relative;
-		overflow: hidden;
-	    float: right;
-	    margin-right: 250px;
-	}
-
-	.weather-form{
-	    padding-top: 200px;
-	    padding-bottom: 400px;
-	    padding-right: 250px;
-	    padding-left: 250px;
-	    float: right;
-	    margin-left: 300px;
-		background-color: rgb(94, 245, 225);
-	}
-
-	.weather-form:hover .dropdown {
-		display: block;
-	}
-
-	.drop{
-	    font-weight: bold;
-	}
-
-	.dropdown-btn {
-		color: rgb(0, 0, 0);
-		height: 25px;
-		width: 150px;
-		margin: 8px auto;
-		border: none;
-		border-width: 1px;
-	    border-style: solid;
-		box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
-		border-radius: 18px;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	    cursor: pointer;
-		transition: background-color 0.1s;	}
 
 	.submit-btn{
 		color: white;
-		font-family: 'Courier New', Courier, monospace;
 		background-image: linear-gradient(to right,
-				rgb(0, 0, 0),
-				rgb(36, 136, 114));
-	    padding-left: 12px;
-	    padding-right: 12px;
-	    padding-top: 8px;
-	    padding-bottom: 8px;
+				rgb(27, 23, 18),
+				rgb(33, 172, 214));
+		height: 40px;
+		width: 100px;
 		border-radius: 50px;
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-		font-size: 15px;
+		font-size: 18px;
 		border: none;
 		cursor: pointer;
-		transition: box-shadow 0.15s, 
-					padding-top 0.15s,
-	                padding-bottom 0.15s,
-	                padding-right 0.15s,
-	                padding-left 0.15s;
-	    font-weight: bold;
-		margin-top: 10px;
+		transition: height 0.15s,
+					width 0.15s,
+					border-radius 0.15s;
 	}
-
+	
 	.submit-btn:hover{
-		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-	    padding-left: 14px;
-	    padding-right: 14px;
-	    padding-top: 10px;
-	    padding-bottom: 10px;
+		height: 50px;
+		width: 110px;
+		border-radius: 25px;
 	}
-
-	.submit-btn:active{
-		opacity: 0.8;
-	}
-	  
-	.section {
-		position: relative;
-		display: inline-block;
-	}
-	  
-	.section:hover .dropdown-content {
-		display: block;
-	}
-	  
-	.section:hover .dropdown-btn {
-		background-color: #d5e0df;
-	} */
 }
-
-/* @media screen and (max-width: 320px) {
-	.container {
-		height: 600px;
-		width: 300px;
-		background-color: white;
-		position: relative;
-		overflow: hidden;
-	    float: right;
-	    margin-right: 250px;
-	}
-
-	.weather-form{
-	    padding-top: 200px;
-	    padding-bottom: 400px;
-	    padding-right: 250px;
-	    padding-left: 250px;
-	    float: right;
-	    margin-left: 300px;
-		background-color: rgb(94, 245, 225);
-	}
-
-	.weather-form:hover .dropdown {
-		display: block;
-	}
-
-	.drop{
-	    font-weight: bold;
-	}
-
-	.dropdown-btn {
-		color: rgb(0, 0, 0);
-		height: 25px;
-		width: 150px;
-		margin: 8px auto;
-		border: none;
-		border-width: 1px;
-	    border-style: solid;
-		box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
-		border-radius: 18px;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	    cursor: pointer;
-		transition: background-color 0.1s;	}
-
-	.submit-btn{
-		color: white;
-		font-family: 'Courier New', Courier, monospace;
-		background-image: linear-gradient(to right,
-				rgb(0, 0, 0),
-				rgb(36, 136, 114));
-	    padding-left: 12px;
-	    padding-right: 12px;
-	    padding-top: 8px;
-	    padding-bottom: 8px;
-		border-radius: 50px;
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-		font-size: 15px;
-		border: none;
-		cursor: pointer;
-		transition: box-shadow 0.15s, 
-					padding-top 0.15s,
-	                padding-bottom 0.15s,
-	                padding-right 0.15s,
-	                padding-left 0.15s;
-	    font-weight: bold;
-		margin-top: 10px;
-	}
-
-	.submit-btn:hover{
-		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-	    padding-left: 14px;
-	    padding-right: 14px;
-	    padding-top: 10px;
-	    padding-bottom: 10px;
-	}
-
-	.submit-btn:active{
-		opacity: 0.8;
-	}
-	  
-	.section {
-		position: relative;
-		display: inline-block;
-	}
-	  
-	.section:hover .dropdown-content {
-		display: block;
-	}
-	  
-	.section:hover .dropdown-btn {
-		background-color: #d5e0df;
-	}
-	  
-	.dropdown-content {
-		display: none;
-		position: absolute;
-		background-color: #f1f1f1;
-		min-width: 160px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-	}
-	  
-	.dropdown-content option{
-		color: black;
-		padding: 5px 10px;
-		text-decoration: none;
-		display: block;
-		transition: background-color 0.15s;
-	}
-	  
-	.dropdown-content option:hover {
-		background-color: rgb(178, 212, 202);
-		cursor: pointer;
-	}
-} */
