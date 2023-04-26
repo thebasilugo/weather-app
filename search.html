@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather finder</title>
+</head>
+<body class="container">
+
+<div class="left-float spans">
+    <h1>Weather Finder &RightArrow; </h1>
+    <h2 id="display-info">Use the information at the right to find the weather of a specific location, which would be displayed here!</h2>
+</div>
+
+    <!-- Forms for specific location -->
+			<div class="weather-form spans">
+
+                <!-- Country dropdown -->
+                <span class="section">
+                    <label for="country" class="drop-tags">Country</label>
+                    <input class="text-field" type="text" placeholder="E.g; Nigeria">
+                </span>
+
+                <!-- City dropdown -->
+                <span class="section">
+                    <label for="city" class="drop-tags">City</label>
+                    <input class="text-field" type="text" placeholder="E.g; Lagos">
+                </span>
+
+                <!-- Submit button -->
+                <p></p>
+				<button class="submit-btn" onclick="showWeatherInfo()">Get weather</button>
+			</div>
+
+            <p id="display-info"></p>
+
+        <span class="signature"> 
+            <footer> &copy; <a href="https://thebasilugo.github.io/staticweb" target="
+                _blank">thebasilugo</a> 2023</footer>
+        </span>
+
+            <script src="index.js"></script>
+</body>
+</html>
