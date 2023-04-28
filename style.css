@@ -80,6 +80,7 @@ body {
 .index-btn > a {
 	text-decoration: none;
 	color: black;
+	transition-delay: 2s;
 }
 
 /* Search page */
@@ -111,16 +112,38 @@ body {
 
 .spans{
 	display: inline-block;
+	
 }
+
+.show-weather {
+    width: 350px;
+    padding: 2px 2px 0;
+    font-size: 15px;
+	background-color: rgb(170, 170, 170);
+    overflow: hidden;
+    text-align: justify;
+	max-height: 200px;
+    }
 
 .weather-form{
 	color: rgb(0, 0, 0);
 	width: 500px;
 	justify-content: center;
-	padding-top: 20px;
-	padding-bottom: 300px;
+	margin-top: 20px;
+	padding-top: 200px;
+	padding-bottom: 250px;
 	padding-left: 40px;
 	padding-right: 10px;
+}
+
+.heightened {
+	margin-bottom : 200px;
+	transition: margin-bottom 0.5s;
+}
+
+.no-heightened {
+	margin-bottom : 0px;
+	transition: margin-bottom 0.5s;
 }
 
 .section {
@@ -193,7 +216,7 @@ body {
 	opacity: 0.8;
 }
 
-.index-btn > a {
+a {
 	text-decoration: none;
 	color: black;
 }
@@ -202,7 +225,7 @@ body {
 	font-size: 10px;
 	font-weight: bold;
 	display: inline;
-	margin-top: 500px;
+	margin-top: 350px;
 	text-align: center;
 	cursor: pointer;
 	color: black;
