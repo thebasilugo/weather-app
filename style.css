@@ -26,17 +26,58 @@ body {
 }
 
 /* Home page */
+.bg {
+	width: 100%;
+	height: 110vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: 300% 300%;
+	background-image: linear-gradient(-45deg, rgb(240, 224, 0) 0%, rgb(130, 255, 118) 25%, rgb(255, 214, 255) 51%, rgb(255, 243, 82) 100%);
+	-webkit-animation: AnimateBG 10s ease infinite;
+			animation: AnimateBG 10s ease infinite;
+}
+  
+@-webkit-keyframes AnimateBG {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+}
+  
+@keyframes AnimateBG {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+}
+
+.tooltip {
+	margin-top: 200px;
+	margin-bottom: 100px;
+}
 
 .intro > a {
 	opacity: 0.8;
-	color: rgb(0, 62, 112);
+	color: rgb(61, 61, 61);
 	text-decoration: none;
 	transition: font-size 0.15s;
+	border-width: 250px;
 }
 
 .intro > a:hover{
 	opacity: 1;
-	font-size: larger;
+	font-size: xx-large;
 }
 
 .intro > a:active{
@@ -50,8 +91,13 @@ body {
 
 .the-boys:hover {
 	opacity: 0.8;
-	font-size: larger;
+	font-size: xx-large;
 	cursor: pointer;
+}
+
+.the-boys > a {
+	text-decoration: none;
+	color: rgb(46, 46, 46);
 }
 
 .index-btn {
@@ -64,13 +110,17 @@ body {
 	padding-right: 10px;
 	margin-top: 250px;
 	font-weight: bold;
-	box-shadow: 3px 3px 3px 0;
+	box-shadow: 2px 2px 2px 0;
 	cursor: pointer;
-	transition: background-color 0.15s;
+	transition: background-color 0.15s,
+				font-size 0.15s,
+				box-shadow 0.15s;
 }
 
 .index-btn:hover{
 	background-color: rgb(34, 168, 157);
+	font-size: large	;
+	box-shadow: 5px 5px 5px 0;
 }
 
 .index-btn:active{
@@ -80,11 +130,9 @@ body {
 .index-btn > a {
 	text-decoration: none;
 	color: black;
-	transition-delay: 2s;
 }
 
 /* Search page */
-
 .left-float{
 	width: 800px;
 	padding-top: 280px;
@@ -110,9 +158,22 @@ body {
 	color: rgb(125, 180, 173);
 }
 
+.left-float a{
+	background-color: rgb(125, 180, 173);
+	color: black;
+	text-decoration: none;
+	transition: background-color 0.15s,
+				color 0.15s;
+}
+
+.left-float:hover a{
+	background-color: black;
+	color: rgb(125, 180, 173);
+	text-decoration: none;
+}
+
 .spans{
 	display: inline-block;
-	
 }
 
 .show-weather {
@@ -137,13 +198,13 @@ body {
 }
 
 .heightened {
-	margin-bottom : 200px;
-	transition: margin-bottom 0.5s;
+	margin-bottom : 300px;
+	transition: margin-bottom 1s;
 }
 
 .no-heightened {
 	margin-bottom : 0px;
-	transition: margin-bottom 0.5s;
+	transition: margin-bottom 1s;
 }
 
 .section {
@@ -214,11 +275,6 @@ body {
 .submit-btn:active{
 	background-color: rgb(57, 196, 184);
 	opacity: 0.8;
-}
-
-a {
-	text-decoration: none;
-	color: black;
 }
 
 .signature{
