@@ -11,7 +11,7 @@
 
 <div class="left-float spans">
     <h1>Weather Finder &RightArrow; </h1>
-    <h2 id="display-info">Use the information at the right to find the weather of a specific location, which would be displayed here!</h2>
+    <h2>Use the information at the right to find the weather of a specific location, which would be displayed here!</h2>
 </div>
 
     <!-- Forms for specific location -->
@@ -30,11 +30,12 @@
                 </span>
 
                 <!-- Submit button -->
-                <p></p>
-				<button class="submit-btn" onclick="showWeatherInfo()">Get weather</button>
+				<button class="submit-btn" id="weather-info" onclick="displayInfo()">Show Weather</button>
+                <br><br>
+                <div class="spans">
+                    <p id="display-info" class=""></p>
+                </div>
 			</div>
-
-            <p id="display-info"></p>
 
         <span class="signature"> 
             <footer> &copy; <a href="https://thebasilugo.github.io/staticweb" target="
