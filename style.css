@@ -423,7 +423,7 @@ body {
 	
 	/* Search page */
 	.left-float{
-		width: 480px;
+		width: fit-content;
 		margin-top: -10px;
 		margin-bottom: 20px;
 		margin-left: -10px;
