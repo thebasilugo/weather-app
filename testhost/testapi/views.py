@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import requests
+import json
 
 def get_lon_lat(place):
     url = "https://api.opencagedata.com/geocode/v1/json"
@@ -30,11 +31,18 @@ def home(request):
 
         connection = requests.get("http://api.openweathermap.org/data/2.5/weather", params=para)
         data = connection.json()
-        print(f'the data {data}')
-        return render(request, "index.html", {'data': data})
-        
+        edited_data ={'weather':data['weather'][0]['main'],'main': data['main'], 'visibility': data['visibility']}
+        edited_data = json.dumps(edited_data)
+        edited_data = json.loads(edited_data.replace("'", "\""))
+        edited_data = json.dumps(edited_data)
+        edited_data = json.loads(edited_data)
+        context = {
+            'weather': edited_data['weather'],
+            'temp_min': edited_data['main']['temp_min'],
+            'temp_max': edited_data['main']['temp_max'],
+        }
+        print(f'the data {edited_data}')
+        return render(request, "index.html", context)
 
 
     return render(request, "index.html")
-
-
