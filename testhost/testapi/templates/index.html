@@ -7,71 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather finder</title>
 </head>
-<body class="container">
+<body class="container bg">
+
 
 <div class="left-float spans">
-    <h1>Weather Finder &RightArrow; </h1>
-    <h2>Use the information at the right to find the weather of a specific location</h2>
+    {% if weather %}
+          <h1>Weather: {{ weather }}</h1>
+          <h1>Min Temperature: {{ temp_min }}</h1>
+          <h1>Max Temperature: {{ temp_max }}</h1>
+    {% else %}
+          <p class="prev"><a href="index.html">&lt; GO BACK</a></p>
+          <h1>Weather Finder &RightArrow;</h1>
+          <h2>Use the information at the right to find the weather of a specific location, which would be displayed here!</h2>
+    {% endif %}
 </div>
 
     <!-- Forms for specific location -->
-    <div class="weather-form spans">
-    <form method="post">
-        {% csrf_token %}
-        <span class="section">
-        <label for="country" class="drop-tags">Country</label>
-        <input name ='country' id="country">
-        </span>
-
-        <span class="section">
-            <label for="city" class="drop-tags" id="city" name="city">City</label>
-            <input name ='city' id="city">
-        </span>
-
-        <p></p>
-        <button class="submit-btn" type="submit">Get weather</button>
-    </form>
-    </div>
-    
-
-
-
-			<!-- <div class="weather-form spans"> -->
-
+			<div class="weather-form spans">
+            <form method="post">
+                {% csrf_token %}
                 <!-- Country dropdown -->
-                <!-- <form method="POST" action="{% url 'home' %}"> -->
-                    <!-- {% csrf_token %} -->
-                <!-- <span class="section"> -->
-                    <!-- <label for="country" class="drop-tags">Country</label> -->
-                    <!-- <input name ='country' id="country"> -->
-                    <!-- <select class="dropdown-btn" id="country" name="country">
-                        <option selected disabled>Select a country</option>
-                        <option>Country 1</option>
-                        <option>Country 2</option>
-                    </select> -->
-                <!-- </span> -->
+                <span class="section">
+                    <label for="country" class="drop-tags">Country</label>
+                    <input class="text-field" type="text" placeholder="E.g; Nigeria" id="country" name="country">
+                </span>
 
                 <!-- City dropdown -->
-                <!-- <span class="section"> -->
-                    <!-- <label for="city" class="drop-tags" id="city" name="city">City</label> -->
-                    <!-- <input name ='city' id="city"> -->
-                    <!-- <select class="dropdown-btn" onclick="showFunction()">
-                        <option selected disabled>Select a city</option>                        <option>City 1</option>
-                        <option>City 2</option>
-                    </select> -->
-                <!-- </span> -->
+                <span class="section">
+                    <label for="city" class="drop-tags">City</label>
+                    <input class="text-field" type="text" placeholder="E.g; Lagos" id="city" name="city">
+                </span>
 
                 <!-- Submit button -->
-                <!-- <p></p> -->
-				<!-- <button class="submit-btn">Get weather</button> -->
-                <!-- </form> -->
-			<!-- </div> -->
+				<button class="submit-btn" id="weather-info" >Show Weather</button>
+                <br><br>
+                <div class="spans">
+                    <p id="display-info" class=""></p>
+                </div>
+            </form>     
+			</div>
 
         <span class="signature"> 
             <footer> &copy; <a href="https://thebasilugo.github.io/staticweb" target="
                 _blank">thebasilugo</a> 2023</footer>
         </span>
 
-            <!-- <script src="index.js"></script> -->
+            <script src="static\js\index.js">
+            </script>
+            
 </body>
 </html>
